@@ -72,7 +72,7 @@ describe('MediBridge AI Integration Tests', () => {
     // Wait for async response mapping the derived ARIA/Semantics into the UI
     await waitFor(() => {
       expect(screen.getByText('Mock Plan')).toBeInTheDocument();
-      expect(screen.getByText('123 Safe St')).toBeInTheDocument(); // Map embed fallback parameter mapping
+      expect(screen.getByTitle('Google Maps embed for 123 Safe St')).toBeInTheDocument(); // Map embed fallback parameter mapping
     });
   });
 

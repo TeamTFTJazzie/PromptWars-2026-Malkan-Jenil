@@ -1,0 +1,422 @@
+
+[1m[46m RUN [49m[22m [36mv4.1.2 [39m[90mC:/Users/jenil/.gemini/antigravity/scratch/medibridge-ai[39m
+
+ [32m✓[39m src/tests/utils.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [31m❯[39m src/tests/App.test.jsx [2m([22m[2m4 tests[22m[2m | [22m[31m1 failed[39m[2m)[22m[33m 1296[2mms[22m[39m
+     [32m✓[39m renders strictly complete semantic tree and ARIA labels[32m 167[2mms[22m[39m
+     [32m✓[39m handles Input Validation edge cases restricting invalid formats natively[32m 44[2mms[22m[39m
+[31m     [31m×[31m handles AI output format validation properly intercepting nested Action Plans[39m[33m 1040[2mms[22m[39m
+     [32m✓[39m handles robust Error Handling paths gracefully on system crash[32m 43[2mms[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯⎯[39m[1m[41m Failed Tests 1 [49m[22m[31m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[41m[1m FAIL [22m[49m src/tests/App.test.jsx[2m > [22mMediBridge AI Integration Tests[2m > [22mhandles AI output format validation properly intercepting nested Action Plans
+[31m[1mTestingLibraryElementError[22m[39m: Unable to find an element with the text: 123 Safe St. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<main[39m
+      [33maria-label[39m=[32m"MediBridge AI Main Dashboard"[39m
+      [33mtabindex[39m=[32m"-1"[39m
+    [36m>[39m
+      [36m<header[39m
+        [33mstyle[39m=[32m"text-align: center; margin-bottom: 3rem;"[39m
+      [36m>[39m
+        [36m<h1>[39m
+          [0mMediBridge [0m
+          [36m<span>[39m
+            [0mAI[0m
+          [36m</span>[39m
+        [36m</h1>[39m
+        [36m<p[39m
+          [33mstyle[39m=[32m"color: var(--gray); font-size: 1.2rem;"[39m
+        [36m>[39m
+          [0mRapid Emergency Incident & Medical Triage System[0m
+        [36m</p>[39m
+      [36m</header>[39m
+      [36m<section[39m
+        [33mclass[39m=[32m"card"[39m
+      [36m>[39m
+        [36m<h2>[39m
+          [0mReport Emergency[0m
+        [36m</h2>[39m
+        [36m<form[39m
+          [33mnovalidate[39m=[32m""[39m
+        [36m>[39m
+          [36m<label[39m
+            [33mclass[39m=[32m"visually-hidden"[39m
+            [33mfor[39m=[32m"emergencyDesc"[39m
+            [33mstyle[39m=[32m"display: none;"[39m
+          [36m>[39m
+            [0mDescribe Emergency[0m
+          [36m</label>[39m
+          [36m<textarea[39m
+            [33maria-required[39m=[32m"true"[39m
+            [33mid[39m=[32m"emergencyDesc"[39m
+            [33mplaceholder[39m=[32m"Type or use Voice Dictation to report incident ('Car crash...', 'Burns leg...')"[39m
+            [33mrows[39m=[32m"4"[39m
+          [36m>[39m
+            [0mValid emergency happened here.[0m
+          [36m</textarea>[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center;"[39m
+          [36m>[39m
+            [36m<button[39m
+              [33maria-pressed[39m=[32m"false"[39m
+              [33mclass[39m=[32m"btn"[39m
+              [33mstyle[39m=[32m"background-color: var(--navy-light); border: 1px solid var(--gray);"[39m
+              [33mtype[39m=[32m"button"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"icon"[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M12 14C13.66 14 15 12.66 15 11V5C15 3.34 13.66 2 12 2C10.34 2 9 3.34 9 5V11C9 12.66 10.34 14 12 14ZM17 11C17 13.76 14.76 16 12 16C9.24 16 7 13.76 7 11H5C5 14.53 7.61 17.43 11 17.92V21H13V17.92C16.39 17.43 19 14.53 19 11H17Z"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [0mUse Voice Data[0m
+            [36m</button>[39m
+            [36m<span[39m
+              [33maria-live[39m=[32m"polite"[39m
+              [33mstyle[39m=[32m"font-size: 0.875rem; color: var(--red);"[39m
+            [36m/>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"margin-bottom: 1.5rem;"[39m
+          [36m>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"visually-hidden"[39m
+              [33mfor[39m=[32m"emergencyPhoto"[39m
+              [33mstyle[39m=[32m"display: none;"[39m
+            [36m>[39m
+              [0mUpload Context Photo[0m
+            [36m</label>[39m
+            [36m<input[39m
+              [33maccept[39m=[32m"image/jpeg,image/png,image/webp"[39m
+              [33maria-label[39m=[32m"Upload Context Photo"[39m
+              [33mid[39m=[32m"emergencyPhoto"[39m
+              [33mtype[39m=[32m"file"[39m
+            [36m/>[39m
+            [36m<small[39m
+              [33mstyle[39m=[32m"color: var(--gray); display: block;"[39m
+            [36m>[39m
+              [0mMax 5MB (JPG, PNG, WEBP)[0m
+            [36m</small>[39m
+          [36m</div>[39m
+          [36m<button[39m
+            [33maria-live[39m=[32m"polite"[39m
+            [33mclass[39m=[32m"btn"[39m
+            [33mstyle[39m=[32m"width: 100%; padding: 1rem; font-size: 1.2rem;"[39m
+            [33mtype[39m=[32m"submit"[39m
+          [36m>[39m
+            [36m<svg[39m
+              [33mclass[39m=[32m"icon"[39m
+              [33mstyle[39m=[32m""[39m
+              [33mviewBox[39m=[32m"0 0 24 24"[39m
+            [36m>[39m
+              [36m<path[39m
+                [33md[39m=[32m"M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19ZM11 17H13V13H17V11H13V7H11V11H7V13H11V17Z"[39m
+              [36m/>[39m
+            [36m</svg>[39m
+            [0mDispatch Emergency Triage[0m
+          [36m</button>[39m
+        [36m</form>[39m
+      [36m</section>[39m
+      [36m<div[39m
+        [33maria-atomic[39m=[32m"true"[39m
+        [33maria-live[39m=[32m"polite"[39m
+        [33mstyle[39m=[32m"text-align: center; margin: 2rem 0px;"[39m
+      [36m/>[39m
+      [36m<article[39m
+        [33maria-live[39m=[32m"polite"[39m
+        [33mclass[39m=[32m"card"[39m
+      [36m>[39m
+        [36m<h2>[39m
+          [0mGenerated Protocol[0m
+        [36m</h2>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"grid-2"[39m
+          [33mstyle[39m=[32m"margin-bottom: 1.5rem;"[39m
+        [36m>[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"padding: 1rem; background-color: var(--input-bg); border-radius: 8px;"[39m
+          [36m>[39m
+            [36m<strong>[39m
+              [0mUrgency:[0m
+            [36m</strong>[39m
+            [0m [0m
+            [36m<span[39m
+              [33mstyle[39m=[32m"color: var(--white);"[39m
+            [36m>[39m
+              [0mHigh[0m
+            [36m</span>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33mstyle[39m=[32m"padding: 1rem; background-color: var(--input-bg); border-radius: 8px;"[39m
+          [36m>[39m
+            [36m<strong>[39m
+              [0mSuggested Unit:[0m
+            [36m</strong>[39m
+            [0m [0m
+            [0mAmbulance[0m
+          [36m</div>[39m
+        [36m</div>[39m
+        [36m<div[39m
+          [33maria-label[39m=[32m"Immediate Action Plan Steps"[39m
+          [33mclass[39m=[32m"action-plan"[39m
+        [36m>[39m
+          [36m<h3>[39m
+            [0mMock Plan[0m
+          [36m</h3>[39m
+          [36m<ul>[39m
+            [36m<li>[39m
+              [0mStay Secure[0m
+            [36m</li>[39m
+          [36m</ul>[39m
+        [36m</div>[39m
+      [36m</article>[39m
+      [36m<div[39m
+        [33mclass[39m=[32m"card map-container"[39m
+      [36m>[39m
+        [36m<h2>[39m
+          [0mSuggested Location Area[0m
+        [36m</h2>[39m
+        [36m<iframe[39m
+          [33mallowfullscreen[39m=[32m""[39m
+          [33maria-label[39m=[32m"Map showing the detected or fallback incident location"[39m
+          [33mloading[39m=[32m"lazy"[39m
+          [33msrc[39m=[32m"https://maps.google.com/maps?q=123%20Safe%20St&t=&z=13&ie=UTF8&iwloc=&output=embed"[39m
+          [33mtitle[39m=[32m"Google Maps embed for 123 Safe St"[39m
+        [36m/>[39m
+      [36m</div>[39m
+      [36m<footer[39m
+        [33maria-label[39m=[32m"Footer MediBridge Info"[39m
+        [33mstyle[39m=[32m"text-align: center; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--navy-light); color: var(--gray);"[39m
+      [36m>[39m
+        [36m<p>[39m
+          [36m<small>[39m
+            [0m© [0m
+            [0m2026[0m
+            [0m MediBridge AI. For life-threatening emergencies, dial local authorities.[0m
+          [36m</small>[39m
+        [36m</p>[39m
+      [36m</footer>[39m
+    [36m</main>[39m
+  [36m</div>[39m
+[36m</body>[39m
+
+Ignored nodes: comments, script, style
+[36m<html>[39m
+  [36m<head />[39m
+  [36m<body>[39m
+    [36m<div>[39m
+      [36m<main[39m
+        [33maria-label[39m=[32m"MediBridge AI Main Dashboard"[39m
+        [33mtabindex[39m=[32m"-1"[39m
+      [36m>[39m
+        [36m<header[39m
+          [33mstyle[39m=[32m"text-align: center; margin-bottom: 3rem;"[39m
+        [36m>[39m
+          [36m<h1>[39m
+            [0mMediBridge [0m
+            [36m<span>[39m
+              [0mAI[0m
+            [36m</span>[39m
+          [36m</h1>[39m
+          [36m<p[39m
+            [33mstyle[39m=[32m"color: var(--gray); font-size: 1.2rem;"[39m
+          [36m>[39m
+            [0mRapid Emergency Incident & Medical Triage System[0m
+          [36m</p>[39m
+        [36m</header>[39m
+        [36m<section[39m
+          [33mclass[39m=[32m"card"[39m
+        [36m>[39m
+          [36m<h2>[39m
+            [0mReport Emergency[0m
+          [36m</h2>[39m
+          [36m<form[39m
+            [33mnovalidate[39m=[32m""[39m
+          [36m>[39m
+            [36m<label[39m
+              [33mclass[39m=[32m"visually-hidden"[39m
+              [33mfor[39m=[32m"emergencyDesc"[39m
+              [33mstyle[39m=[32m"display: none;"[39m
+            [36m>[39m
+              [0mDescribe Emergency[0m
+            [36m</label>[39m
+            [36m<textarea[39m
+              [33maria-required[39m=[32m"true"[39m
+              [33mid[39m=[32m"emergencyDesc"[39m
+              [33mplaceholder[39m=[32m"Type or use Voice Dictation to report incident ('Car crash...', 'Burns leg...')"[39m
+              [33mrows[39m=[32m"4"[39m
+            [36m>[39m
+              [0mValid emergency happened here.[0m
+            [36m</textarea>[39m
+            [36m<div[39m
+              [33mstyle[39m=[32m"margin-bottom: 1rem; display: flex; gap: 1rem; align-items: center;"[39m
+            [36m>[39m
+              [36m<button[39m
+                [33maria-pressed[39m=[32m"false"[39m
+                [33mclass[39m=[32m"btn"[39m
+                [33mstyle[39m=[32m"background-color: var(--navy-light); border: 1px solid var(--gray);"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [36m<svg[39m
+                  [33mclass[39m=[32m"icon"[39m
+                  [33mviewBox[39m=[32m"0 0 24 24"[39m
+                [36m>[39m
+                  [36m<path[39m
+                    [33md[39m=[32m"M12 14C13.66 14 15 12.66 15 11V5C15 3.34 13.66 2 12 2C10.34 2 9 3.34 9 5V11C9 12.66 10.34 14 12 14ZM17 11C17 13.76 14.76 16 12 16C9.24 16 7 13.76 7 11H5C5 14.53 7.61 17.43 11 17.92V21H13V17.92C16.39 17.43 19 14.53 19 11H17Z"[39m
+                  [36m/>[39m
+                [36m</svg>[39m
+                [0mUse Voice Data[0m
+              [36m</button>[39m
+              [36m<span[39m
+                [33maria-live[39m=[32m"polite"[39m
+                [33mstyle[39m=[32m"font-size: 0.875rem; color: var(--red);"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mstyle[39m=[32m"margin-bottom: 1.5rem;"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"visually-hidden"[39m
+                [33mfor[39m=[32m"emergencyPhoto"[39m
+                [33mstyle[39m=[32m"display: none;"[39m
+              [36m>[39m
+                [0mUpload Context Photo[0m
+              [36m</label>[39m
+              [36m<input[39m
+                [33maccept[39m=[32m"image/jpeg,image/png,image/webp"[39m
+                [33maria-label[39m=[32m"Upload Context Photo"[39m
+                [33mid[39m=[32m"emergencyPhoto"[39m
+                [33mtype[39m=[32m"file"[39m
+              [36m/>[39m
+              [36m<small[39m
+                [33mstyle[39m=[32m"color: var(--gray); display: block;"[39m
+              [36m>[39m
+                [0mMax 5MB (JPG, PNG, WEBP)[0m
+              [36m</small>[39m
+            [36m</div>[39m
+            [36m<button[39m
+              [33maria-live[39m=[32m"polite"[39m
+              [33mclass[39m=[32m"btn"[39m
+              [33mstyle[39m=[32m"width: 100%; padding: 1rem; font-size: 1.2rem;"[39m
+              [33mtype[39m=[32m"submit"[39m
+            [36m>[39m
+              [36m<svg[39m
+                [33mclass[39m=[32m"icon"[39m
+                [33mstyle[39m=[32m""[39m
+                [33mviewBox[39m=[32m"0 0 24 24"[39m
+              [36m>[39m
+                [36m<path[39m
+                  [33md[39m=[32m"M19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V5H19V19ZM11 17H13V13H17V11H13V7H11V11H7V13H11V17Z"[39m
+                [36m/>[39m
+              [36m</svg>[39m
+              [0mDispatch Emergency Triage[0m
+            [36m</button>[39m
+          [36m</form>[39m
+        [36m</section>[39m
+        [36m<div[39m
+          [33maria-atomic[39m=[32m"true"[39m
+          [33maria-live[39m=[32m"polite"[39m
+          [33mstyle[39m=[32m"text-align: center; margin: 2rem 0px;"[39m
+        [36m/>[39m
+        [36m<article[39m
+          [33maria-live[39m=[32m"polite"[39m
+          [33mclass[39m=[32m"card"[39m
+        [36m>[39m
+          [36m<h2>[39m
+            [0mGenerated Protocol[0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"grid-2"[39m
+            [33mstyle[39m=[32m"margin-bottom: 1.5rem;"[39m
+          [36m>[39m
+            [36m<div[39m
+              [33mstyle[39m=[32m"padding: 1rem; background-color: var(--input-bg); border-radius: 8px;"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mUrgency:[0m
+              [36m</strong>[39m
+              [0m [0m
+              [36m<span[39m
+                [33mstyle[39m=[32m"color: var(--white);"[39m
+              [36m>[39m
+                [0mHigh[0m
+              [36m</span>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mstyle[39m=[32m"padding: 1rem; background-color: var(--input-bg); border-radius: 8px;"[39m
+            [36m>[39m
+              [36m<strong>[39m
+                [0mSuggested Unit:[0m
+              [36m</strong>[39m
+              [0m [0m
+              [0mAmbulance[0m
+            [36m</div>[39m
+          [36m</div>[39m
+          [36m<div[39m
+            [33maria-label[39m=[32m"Immediate Action Plan Steps"[39m
+            [33mclass[39m=[32m"action-plan"[39m
+          [36m>[39m
+            [36m<h3>[39m
+              [0mMock Plan[0m
+            [36m</h3>[39m
+            [36m<ul>[39m
+              [36m<li>[39m
+                [0mStay Secure[0m
+              [36m</li>[39m
+            [36m</ul>[39m
+          [36m</div>[39m
+        [36m</article>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"card map-container"[39m
+        [36m>[39m
+          [36m<h2>[39m
+            [0mSuggested Location Area[0m
+          [36m</h2>[39m
+          [36m<iframe[39m
+            [33mallowfullscreen[39m=[32m""[39m
+            [33maria-label[39m=[32m"Map showing the detected or fallback incident location"[39m
+            [33mloading[39m=[32m"lazy"[39m
+            [33msrc[39m=[32m"https://maps.google.com/maps?q=123%20Safe%20St&t=&z=13&ie=UTF8&iwloc=&output=embed"[39m
+            [33mtitle[39m=[32m"Google Maps embed for 123 Safe St"[39m
+          [36m/>[39m
+        [36m</div>[39m
+        [36m<footer[39m
+          [33maria-label[39m=[32m"Footer MediBridge Info"[39m
+          [33mstyle[39m=[32m"text-align: center; margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--navy-light); color: var(--gray);"[39m
+        [36m>[39m
+          [36m<p>[39m
+            [36m<small>[39m
+              [0m© [0m
+              [0m2026[0m
+              [0m MediBridge AI. For life-threatening emergencies, dial local authorities.[0m
+            [36m</small>[39m
+          [36m</p>[39m
+        [36m</footer>[39m
+      [36m</main>[39m
+    [36m</div>[39m
+  [36m</body>[39m
+[36m</html>[39m
+[90m [2m❯[22m Proxy.waitForWrapper node_modules/@testing-library/dom/dist/wait-for.js:[2m163:27[22m[39m
+[36m [2m❯[22m src/tests/App.test.jsx:[2m73:11[22m[39m
+    [90m 71|[39m
+    [90m 72|[39m     // Wait for async response mapping the derived ARIA/Semantics into…
+    [90m 73|[39m     [35mawait[39m [34mwaitFor[39m(() [33m=>[39m {
+    [90m   |[39m           [31m^[39m
+    [90m 74|[39m       [34mexpect[39m(screen[33m.[39m[34mgetByText[39m([32m'Mock Plan'[39m))[33m.[39m[34mtoBeInTheDocument[39m()[33m;[39m
+    [90m 75|[39m       expect(screen.getByText('123 Safe St')).toBeInTheDocument(); // …
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯[22m[39m
+
+
+[2m Test Files [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m1 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[31m1 failed[39m[22m[2m | [22m[1m[32m10 passed[39m[22m[90m (11)[39m
+[2m   Start at [22m 13:53:01
+[2m   Duration [22m 2.95s[2m (transform 138ms, setup 253ms, import 323ms, tests 1.30s, environment 2.04s)[22m
+
