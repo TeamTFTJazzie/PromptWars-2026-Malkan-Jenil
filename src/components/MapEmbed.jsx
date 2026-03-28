@@ -12,7 +12,7 @@ const MapEmbed = ({ location }) => {
       ? encodeURIComponent(`${location}`) 
       : encodeURIComponent('New York City, NY'); // Hardcoded fallback
 
-    return `https://maps.google.com/maps?q=${query}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
+    return `https://www.google.com/maps?q=${query}&output=embed`;
   }, [location]);
 
   return (

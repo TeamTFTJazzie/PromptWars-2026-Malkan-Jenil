@@ -54,8 +54,8 @@ Example Output:
 
   try {
     const contents = [];
-    contents.push({ text: systemPrompt });
-    contents.push({ text: `User Emergency Input: ${text}` });
+    contents.push(systemPrompt);
+    contents.push(`User Emergency Input: ${text}`);
 
     if (imageFile) {
       const imagePart = await fileToGenerativePart(imageFile);
@@ -77,7 +77,8 @@ Example Output:
     return JSON.parse(resultText);
 
   } catch (error) {
-    console.error("Gemini API Error:", error);
-    throw new Error("Failed to process the emergency input. Please call 911 immediately if this is life-threatening.");
+    console.error("Gemini API Error Details:", error);
+    // Expose the actual underlying API error so the user can debug their API Key
+    throw new Error(`API Error: ${error.message || 'Permission Denied / Invalid API Key'}`);
   }
 };
