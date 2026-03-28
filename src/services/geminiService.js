@@ -1,3 +1,4 @@
+// Google Service: Gemini Intelligence
 import { GoogleGenAI } from '@google/genai';
 
 // Initialize with environment key
